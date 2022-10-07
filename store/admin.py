@@ -11,3 +11,9 @@ class VariationAdmin(admin.ModelAdmin):
     list_editable = ('is_active',)
     list_filter = ('product','variation_category','variation_value',)
 admin.site.register(Variation,VariationAdmin)
+
+
+
+class ReviewRatingAdmin(admin.ModelAdmin):
+    list_display = ('product','user','review','rating','created_at')
+admin.site.register(ReviewRating,ReviewRatingAdmin)
